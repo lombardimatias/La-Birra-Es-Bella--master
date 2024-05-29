@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Birra es Bella</title>
+    <link rel="icon" sizes="16x16" href="img/icono.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+</head>
+
+    <header id="cabecera">
+        <a href="#" onclick="scrollToTop(); return false;">
+            <img class="logo" src="./img/logo.png" alt="Logo" style="transform: rotate(0deg);">
+        </a>
+        <div id="info-container">
+            <p id="fecha-hora"></p>
+            <p id="clima"></p>
+        </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes-somos.html">Quiénes somos</a></li>
+                <li><a href="nuestros-estilos.html">Nuestros Estilos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <section id="banner-cerveza">
+        <div class="info-banner">
+            <h2>Visita nuestro laboratorio de Cervezas<br>Descubrenos!</h2>
+            <form action="nuestros-estilos.html">
+                <button type="submit">Quiero más Info</button>
+            </form>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h2 class="footer-title">DONDE ESTAMOS?</h2>
+                <p class="footer-direc">Uspallata 3150, C1437JCJ <br>Cdad. Autónoma de Buenos Aires.</p>
+            </div>
+
+            <div class="footer-column">
+                <h2 class="footer-title">CONTACTANOS</h2>
+                <ul class="footer-social-list">
+                    <li class="footer-social-item">
+                        <a href="https://github.com/YesDovis" target="_blank" class="footer-social-link">
+                            <img src="img/icons8-github-50.png" alt="GITHUB">
+                        </a>
+                    </li>
+                    <li class="footer-social-item">
+                        <a href="https://github.com/lombardimatias" target="_blank" class="footer-social-link">
+                            <img src="img/icons8-instagram-50.png" alt="INSTAGRAM">
+                        </a>
+                    </li>
+                    <li class="footer-social-item">
+                        <a href="https://github.com/tomaskurten" target="_blank" class="footer-social-link">
+                            <img src="img/icons8-facebook-50.png" alt="FACEBOOK">
+                        </a>
+                    </li>
+                    <li class="footer-social-item">
+                        <a href="https://inscripcionesagencia.bue.edu.ar/codoacodo/" target="_blank"
+                            class="footer-social-link">
+                            <img src="img/icons8-whatsapp-50.png" alt="WHATSAPP">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h2 class="footer-title">La birra es bella</h2>
+                <p class="footer-text">Cervezas hay para todos los gustos y para cualquier momento. Lager para un día
+                    caluroso o una buena Porter para la carne asada. Si no sabes qué escoger, te asesoramos. No dudes en
+                    consultarnos!!</p>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <p class="footer-copyright-text">&copy; || 2024 || Equipo 17 PYTHON-FRONTEND || 24188 ||.</p>
+        </div>
+      
+    </footer>
+    <script src="./JS/index.js"></script>
+</body>
+
+</html>

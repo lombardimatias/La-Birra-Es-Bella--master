@@ -1,0 +1,36 @@
+
+BOTONES : colores base #C9961A  hover #f9d67f
+
+
+*************************************
+Nuestros estilos:
+
+banner
+
+foto +  h3 span  TIPOS DE CERVEZA
+Descrubre nuestras cervezas!
+<a> quiero! <--- BOTON A TIENDA 
+
+seccion 
+
+h2 tipos de cerveza 
+
+h4 ervezas hay para todos los gustos y para cualquier momento. Lager para un día caluroso o una buena Porter para la carne asada. Si no sabes que escoger, esta guía de estilos te puede ayudar.
+
+<img> LAGER 
+<P> Cerveza de color dorado claro brillante,
+muy refrescante que hasta quita la sed,
+con espuma muy blanca con poca retención,
+un estilo muy balanceado, suave pero con carácter 
+para beber muy fácil. Su sabor es limpio, refinado, 
+equilibrado entre el amargor del lúpulo y los tonos dulces
+de la malta.
+
+<img> BLONDE 
+<P> Cerveza de color rubio claro a rubio turbio en bajas 
+temperaturas, tiene cuerpo seco, con presencia de notas 
+afrutadas pero moderadas y con ligero dulzor al final de cada sorbo. Su carbonatación es de media a alta.
+
+MAS ETILOS SARAZA 
+
+

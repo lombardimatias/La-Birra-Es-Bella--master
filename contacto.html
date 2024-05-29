@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - La Birra es Bella</title>
+    <link rel="icon" sizes="16x16" href="img/icono.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body> 
+    <header id="cabecera">
+        <a href="index.html" onclick="scrollToTop(); return false;">
+            <img class="logo" src="./img/logo.png" alt="Logo">
+        </a>
+        <div id="info-container">
+            <p id="fecha-hora"></p>
+            <p id="clima"></p>
+        </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nuestros-estilos.html">Nuestros Estilos</a></li>
+                <li><a href="quienes-somos.html">Quiénes somos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Sección de formulario de contacto -->
+    <section id="formulario-contacto">
+        <h3 class="titulo-seccion">Contactanos!</h3>
+        <div class="contenedor-general">
+            <div class="contenedor-formulario">
+                <form id="contact-form">
+                    <div class="datos">
+                        <input type="text" id="nombre-apellido" placeholder="Nombre y Apellido" class="input-mitad">
+                        <input type="email" id="email" placeholder="Email" class="input-mitad">            
+                    </div>
+                    <div class="consulta-usuario">
+                        <input type="text" id="tipo-consulta" placeholder="Tipo Consulta..." class="input-full">
+                    </div>
+                    <div class="checkboxes">
+                        <div class="checkbox">
+                            <input type="checkbox" id="soy-mayor">
+                            <label for="soy-mayor">Soy mayor</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="soy-menor">
+                            <label for="soy-menor">Soy menor</label>
+                        </div>
+                    </div>
+                    <div class="mensaje">
+                        <textarea id="mensaje" cols="30" rows="10" placeholder="Tu mensaje ..." class="input-full"></textarea>
+                    </div>
+                    <input type="submit" value="Enviar" class="boton-enviar" id="enviar-btn">
+                </form>
+            </div>
+            <div class="contenedor-mapa">
+                <p class="titulo-seccion2">Donde estamos!</p>
+                <!-- Contenido del mapa de Google Maps -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.560252500462!2d-58.409777524325015!3d-34.640551459444225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb0de996fa65%3A0x47296bd9e98ee2ad!2sUspallata%203150%2C%20C1437JCJ%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1713921578348!5m2!1ses-419!2sar" class="mapa-responsivo"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h2 class="footer-title">DONDE ESTAMOS?</h2>
+                <p class="footer-direc">Uspallata 3150, C1437JCJ <br>Cdad. Autónoma de Buenos Aires.</p>
+            </div>
+
+            <div class="footer-column">
+                <h2 class="footer-title">CONTACTANOS</h2>
+                <ul class="footer-social-list">
+                    <li class="footer-social-item">
+                        <a href="https://github.com/YesDovis" target="_blank" class="footer-social-link">
+                            <img src="img/icons8-github-50.png" alt="GITHUB">
+                        </a>
+                    </li>
+                    <li class="footer-social-item">
+                        <a href="https://github.com/lombardimatias" target="_blank" class="footer-social-link">
+                            <img src="img/icons8-instagram-50.png" alt="INSTAGRAM">
+                        </a>
+                    </li>
+                    <li class="footer-social-item">
+                        <a href="https://github.com/tomaskurten" target="_blank" class="footer-social-link">
+                            <img src="img/icons8-facebook-50.png" alt="FACEBOOK">
+                        </a>
+                    </li>
+                    <li class="footer-social-item">
+                        <a href="https://inscripcionesagencia.bue.edu.ar/codoacodo/" target="_blank"
+                            class="footer-social-link">
+                            <img src="img/icons8-whatsapp-50.png" alt="WHATSAPP">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h2 class="footer-title">La birra es bella</h2>
+                <p class="footer-text">Cervezas hay para todos los gustos y para cualquier momento. Lager para un día
+                    caluroso o una buena Porter para la carne asada. Si no sabes qué escoger, te asesoramos. No dudes en
+                    consultarnos!!</p>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <p class="footer-copyright-text">&copy; || 2024 || Equipo 17 PYTHON-FRONTEND || 24188 ||.</p>
+        </div>
+    </footer>
+    <script src="./JS/index.js"></script>
+</body>
+</html>
