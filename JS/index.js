@@ -2,43 +2,45 @@ document.addEventListener("DOMContentLoaded", function() {
     const contactForm = document.querySelector("#contact-form");
     const enviarBtn = document.querySelector("#enviar-btn");
 
-    contactForm.addEventListener("submit", function(event) {
-        event.preventDefault(); // Evitar que el formulario se envíe por defecto
+    if (contactForm) {
+        contactForm.addEventListener("submit", function(event) {
+            event.preventDefault(); // Evitar que el formulario se envíe por defecto
 
-        // Obtener los valores de los campos del formulario
-        const nombreApellido = document.querySelector("#nombre-apellido").value;
-        const email = document.querySelector("#email").value;
-        const tipoConsulta = document.querySelector("#tipo-consulta").value;
-        const mensaje = document.querySelector("#mensaje").value;
-        const soyMayor = document.querySelector("#soy-mayor").checked;
-        const soyMenor = document.querySelector("#soy-menor").checked;
+            // Obtener los valores de los campos del formulario
+            const nombreApellido = document.querySelector("#nombre-apellido").value;
+            const email = document.querySelector("#email").value;
+            const tipoConsulta = document.querySelector("#tipo-consulta").value;
+            const mensaje = document.querySelector("#mensaje").value;
+            const soyMayor = document.querySelector("#soy-mayor").checked;
+            const soyMenor = document.querySelector("#soy-menor").checked;
 
-        // Validar que se hayan completado todos los campos obligatorios
-        if (nombreApellido.trim() === "" || email.trim() === "" || tipoConsulta.trim() === "" || mensaje.trim() === "") {
-            alert("Por favor completa todos los campos obligatorios.");
-            return;
-        }
+            // Validar que se hayan completado todos los campos obligatorios
+            if (nombreApellido.trim() === "" || email.trim() === "" || tipoConsulta.trim() === "" || mensaje.trim() === "") {
+                alert("Por favor completa todos los campos obligatorios.");
+                return;
+            }
 
-        // Validar el formato del correo electrónico
-        if (!validateEmail(email)) {
-            alert("Por favor ingresa una dirección de correo electrónico válida.");
-            return;
-        }
+            // Validar el formato del correo electrónico
+            if (!validateEmail(email)) {
+                alert("Por favor ingresa una dirección de correo electrónico válida.");
+                return;
+            }
 
-        // Validar que al menos una de las casillas de verificación esté seleccionada
-        if (!soyMayor && !soyMenor) {
-            alert("Por favor selecciona tu condición de edad.");
-            return;
-        }
+            // Validar que al menos una de las casillas de verificación esté seleccionada
+            if (!soyMayor && !soyMenor) {
+                alert("Por favor selecciona tu condición de edad.");
+                return;
+            }
 
-        // Aquí podrías enviar el formulario utilizando AJAX o realizar otras acciones
+            // Aquí podrías enviar el formulario utilizando AJAX o realizar otras acciones
 
-        // Mostrar un mensaje de éxito
-        alert("¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.");
+            // Mostrar un mensaje de éxito
+            alert("¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.");
 
-        // Limpiar el formulario después de enviarlo
-        contactForm.reset();
-    });
+            // Limpiar el formulario después de enviarlo
+            contactForm.reset();
+        });
+    }
 
     // Función para validar el formato de correo electrónico
     function validateEmail(email) {
