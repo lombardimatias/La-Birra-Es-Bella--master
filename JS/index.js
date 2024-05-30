@@ -45,35 +45,35 @@ document.addEventListener("DOMContentLoaded", function() {
         const re = /\S+@\S+\.\S+/;
         return re.test(email);
     }
+
+    // Función para actualizar fecha y hora
+    function updateDateTime() {
+        const now = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate = now.toLocaleDateString('es-ES', options);
+        const formattedTime = now.toLocaleTimeString('es-ES');
+        document.querySelector("#fecha-hora").textContent = `${formattedDate} - ${formattedTime}`;
+    }
+
+    // Llamar a la función inmediatamente y luego cada minuto
+    updateDateTime();
+    setInterval(updateDateTime, 60000);
+
+    // Función para obtener el clima desde wttr.in
+    function fetchWeather() {
+        const apiUrl = 'https://wttr.in/Buenos_Aires?format=%C+%t';
+
+        fetch(apiUrl)
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector("#clima").textContent = `Clima: ${data}`;
+            })
+            .catch(error => {
+                console.error('Error fetching weather data:', error);
+                document.querySelector("#clima").textContent = 'No se pudo obtener el clima.';
+            });
+    }
+
+    // Llamar a la función para obtener el clima
+    fetchWeather();
 });
-
-// Función para actualizar fecha y hora
-function updateDateTime() {
-    const now = new Date();
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    const formattedDate = now.toLocaleDateString('es-ES', options);
-    const formattedTime = now.toLocaleTimeString('es-ES');
-    document.querySelector("#fecha-hora").textContent = `${formattedDate} - ${formattedTime}`;
-}
-
-// Llamar a la función inmediatamente y luego cada minuto
-updateDateTime();
-setInterval(updateDateTime, 60000);
-
-// Función para obtener el clima desde wttr.in
-function fetchWeather() {
-    const apiUrl = 'https://wttr.in/Buenos_Aires?format=%C+%t';
-
-    fetch(apiUrl)
-        .then(response => response.text())
-        .then(data => {
-            document.querySelector("#clima").textContent = `Clima: ${data}`;
-        })
-        .catch(error => {
-            console.error('Error fetching weather data:', error);
-            document.querySelector("#clima").textContent = 'No se pudo obtener el clima.';
-        });
-}
-
-// Llamar a la función para obtener el clima
-fetchWeather();
